@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Styles généraux */
+:root {
+  --black: #000;
+  --white: #fff;
+  --red-primary: #E30613;
+  --red-secondary: #AA040E;
+  --gray: #ADADAC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* (62.5/100) * 16px = 10px */
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--black);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #d02b2b;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Header */
+header#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 5rem;
+  transition: .6s;
+  z-index: 10000;
+}
+
+header#navbar.sticky {
+  background-color: var(--white);
+  padding: 1rem 5rem;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, .3);
+}
+
+.logo {
+  width: 200px;
+  height: 58px;
+}
+
+
+nav {
+  /* width: 55%; */
+  min-width: 500px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  padding: .6rem 1.4rem;
+  border: solid 1px var(--gray);
+  border-radius: 8px;
+  margin: 0 1rem;
+  transition: .6s;
+}
+
+nav ul li:hover {
+  background-color: var(--red-primary);
+  border-color: var(--red-primary);
+  cursor: pointer;
+}
+
+nav ul li a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--black);
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  transition: .3s;
+}
+
+nav ul li:hover a {
+  color: var(--white);
+}
+
+.btn-primary {
+  padding: .6rem 2.5rem;
+  background-color: var(--red-primary);
+  border: solid 1px var(--red-primary);
+  border-radius: 3rem;
+  transition: 0.3s;
+}
+
+.btn-primary a {
+  font-size: 1.6rem;
+  color: var(--white);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--white);
+  border-color: var(--gray);
+  cursor: pointer;
+}
+
+.btn-primary:hover a {
+  color: var(--black);
+}
+
+/** hero section **/
+section#hero {
+  padding-top: 10rem;
+  background-image: linear-gradient(to right, var(--white), var(--gray));
+}
