@@ -214,3 +214,14 @@ section#hero .container div:nth-child(1) h1 {
 section#hero .container div:nth-child(1) p {
   font-size: 2rem;
 }
+
+section#hero .container div:nth-child(1) .btn-primary {
+  width: fit-content;
+  margin-top: 3.5rem;
+}
+
+/** Services Section **/
+
+section#services {
+  padding: 5rem 0;
+}
