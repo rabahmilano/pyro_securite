@@ -349,6 +349,7 @@ section#hero .container div:nth-child(1) .btn-primary {
 #about {
   /* background-color: var(--gray); */
   background-image: linear-gradient(to bottom, var(--gray), var(--white));
+  overflow: hidden;
 }
 
 #about .container {
@@ -357,6 +358,17 @@ section#hero .container div:nth-child(1) .btn-primary {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   column-gap: 1.5rem;
+}
+
+#about .about-logo {
+  width: 170.14px;
+  height: 260.32px;
+  object-fit: cover;
+  position: absolute;
+  top: 5rem; /* Point de départ */
+  right: -45px;
+  transform: translate(0, 0); /* Ajustement initial */
+  z-index: 10;
 }
 
 #about .container > div:nth-of-type(1) {
@@ -397,6 +409,13 @@ section#hero .container div:nth-child(1) .btn-primary {
   display: flex;
   width: max-content;
   transition: 1s;
+}
+
+#about .container .slider .list .item {
+  height: 100%;
+  max-height: 550px;
+  width: 359px;
+  max-width: 100%;
 }
 
 #about .container .slider .list img {

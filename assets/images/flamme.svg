@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="215.145" height="305.317" viewBox="0 0 215.145 305.317">
+  <defs>
+    <filter id="Flamme_logo" x="0" y="0" width="215.145" height="305.317" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Flamme_logo)">
+    <path id="Flamme_logo-2" data-name="Flamme logo" d="M149.921,172.662c20.737-32.519,26.141-65.469,13.347-99.368-6.4,55.5-32.573,66.714-70.292,106.344,25.54-47.1,43.486-84.394,42.871-118.105C135.222,28.468,117.973,7.2,80.393,0c28.086,24.168,26.983,54.651,16.029,78.464-10.692,23.3-30.036,38.725-39.081,39.021-16.286.562-15.463-6.93-12.94-19,2.506-12.1,6.757-28.989-2.189-45.654,4.862,25.61-4.957,54.932-9.059,74.82C29.128,147.4,30.58,158.319,58.86,149.593c25.662-7.919,7.078,16.056-16.2,29.5C20.942,191.6,1.675,192.519,3,152.446c-4.554,15.681-3.776,43.566,1.384,62.132C20.2,271.468,44.736,262.529,60,254.136c36.426-20.018,76.516-60.456,89.926-81.474" transform="translate(17.5 14.5)" fill="rgba(255,255,255,0.39)"/>
+  </g>
+</svg>

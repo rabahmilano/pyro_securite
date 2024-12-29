@@ -97,6 +97,25 @@ const options = {
   threshold: 0.5,
 };
 
+/** animer la flamme **/
+
+document.addEventListener("scroll", () => {
+  const logo = document.querySelector(".about-logo");
+
+  // Récupérez la hauteur totale de la page et la position actuelle de défilement
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const windowHeight = window.innerHeight;
+  const totalHeight = document.body.scrollHeight - windowHeight;
+
+  // Calculez la position du logo en pourcentage du défilement
+  const scrollProgress = scrollTop / totalHeight;
+
+  // Déplacez le logo verticalement en fonction du pourcentage de défilement
+  const translateY = scrollProgress * 200; // Ajustez 200 pour définir la distance totale
+
+  logo.style.transform = `translate(0px, ${translateY}px)`;
+});
+
 /**  Image slider **/
 
 const list = document.querySelector("#about .slider .list");
@@ -125,6 +144,7 @@ let refreshSlider = setInterval(() => {
 const reloadSlider = () => {
   const checkLeft = items[active].offsetLeft;
   list.style.left = -checkLeft + "px";
+  // list.style.transform = `translateX(-${checkLeft}px)`;
 
   const lastActiveDot = document.querySelector(
     "#about .slider .dots li.active"
