@@ -111,7 +111,7 @@ document.addEventListener("scroll", () => {
   const scrollProgress = scrollTop / totalHeight;
 
   // Déplacez le logo verticalement en fonction du pourcentage de défilement
-  const translateY = scrollProgress * 200; // Ajustez 200 pour définir la distance totale
+  const translateY = scrollProgress * 300; // Ajustez 200 pour définir la distance totale
 
   logo.style.transform = `translate(0px, ${translateY}px)`;
 });
@@ -206,3 +206,15 @@ const callback = (entries, observer) => {
 // Créer et démarrer l'Intersection Observer
 const observer = new IntersectionObserver(callback, options);
 counters.forEach((counter) => observer.observe(counter));
+
+/** Temoignage **/
+$(document).ready(function () {
+  $(".carousel").carousel({
+    padding: 200,
+  });
+  autoplay();
+  function autoplay() {
+    $(".carousel").carousel("next");
+    setTimeout(autoplay, 70500);
+  }
+});
