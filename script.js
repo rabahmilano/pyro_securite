@@ -215,6 +215,10 @@ $(document).ready(function () {
   autoplay();
   function autoplay() {
     $(".carousel").carousel("next");
-    setTimeout(autoplay, 70500);
+    setTimeout(autoplay, 7500);
   }
 });
+
+/* Footer */
+// Insère l'année courante dans l'élément avec l'ID "year"
+document.getElementById("year").textContent = new Date().getFullYear();
