@@ -42,12 +42,59 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Ajouter l'écouteur de défilement
   window.addEventListener("scroll", setActiveSection);
 
-  // Initialiser au chargement
   setActiveSection();
 });
+
+/**
+ * Effet parallex pour les images du section hero
+ */
+
+document
+  .getElementById("parallax-wrap")
+  .addEventListener("mousemove", parallax);
+
+/**
+function parallax(e) {
+  document.querySelectorAll(".hero-image-wrap").forEach((move) => {
+    let moving_value = move.getAttribute("data-value");
+    let x = (e.clientX * moving_value) / 250;
+    let y = (e.clientY * moving_value) / 250;
+    
+    move.style.transform = `translateX(${x}px) translateY(${y}px)`;
+  });
+}
+*/
+
+/**
+
+function parallax(e) {
+  document.querySelectorAll(".hero-image-wrap").forEach((move) => {
+    let moving_value = move.getAttribute("data-value");
+    let x = (e.clientX * moving_value) / 200;
+    let y = (e.clientY * moving_value) / 200;
+    
+    // Récupérer la valeur de rotate depuis l'attribut personnalisé
+    let rotateValue = move.getAttribute("data-rotate");
+    
+    // Appliquer la nouvelle transformation en conservant rotate
+    move.style.transform = `rotate(${rotateValue}) translateX(${x}px) translateY(${y}px)`;
+  });
+}
+*/
+
+function parallax(e) {
+  let move = document.getElementById("parallax-hero-image");
+
+  let moving_value = move.getAttribute("data-value");
+  let x = (e.clientX * moving_value) / 200;
+  let y = (e.clientY * moving_value) / 200;
+
+  let rotateValue = move.getAttribute("data-rotate");
+
+  move.style.transform = `rotate(${rotateValue}) translateX(${x}px) translateY(${y}px)`;
+}
 
 // hero effect
 const words = ["Prévenir", "Protéger", "Maîtriser"];
